@@ -16,7 +16,7 @@ function App({ data }) {
   return (
     <div className="App">
       <main>
-        <Search filterText={this.state.filterText} />
+        <Search />
         <ShortList />
         <NameList data={data} />
       </main>
