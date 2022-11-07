@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import 'normalize-css'
 import App from './App';
+import babyNamesData from './babyNamesData.json'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App data={babyNamesData} />
   </React.StrictMode>
 );
 

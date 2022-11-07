@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import NameList from './components/NameList';
+import Search from './components/Search';
+import ShortList from './components/ShortList';
 
-function App() {
+function App({ data }) {
+  Constructor(props){
+    super(props)
+    this.this.state = {
+      filterText: ''
+    }
+  }
+  const nameList = data.map(name => {
+    return <li key={name.id} className={name.sex}>{name.name}</li>
+  })
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main>
+        <Search filterText={this.state.filterText} />
+        <ShortList />
+        <NameList data={data} />
+      </main>
     </div>
   );
 }
