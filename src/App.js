@@ -10,9 +10,9 @@ function App({ data }) {
      // filterText: ''
     //}
  // }
-  const nameList = data.map(name => {
-    return <li key={name.id} className={name.sex}>{name.name}</li>
-  })
+//   const nameList = data.map(name => {
+//     return <li key={name.id} className={name.sex}>{name.name}</li>
+//   })
   return (
     <div className="App">
       <main>
